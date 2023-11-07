@@ -1,5 +1,7 @@
-const Profile = () => {
-  return <Layout>Profile</Layout>;
-};
+import Layout from '../../layout/Layout'
 
-export default Profile;
+const Profile = () => {
+	return <Layout>Profile</Layout>
+}
+
+export default Profile

@@ -12,7 +12,8 @@ $accent-04: rgba($accent, 0.4);
   background-color: $accent-04;
   cursor: pointer;
   color: #fff;
-  @media (max-with: $mobile) {
+
+  @media (max-width: $mobile) {
     font-size: 16px;
     padding: 12px 38px;
   }

@@ -1,4 +1,5 @@
 import cn from 'clsx';
+
 import styles from './Button.module.scss';
 
 const Button = ({ children, clickHandler, size = 'xl' }) => {

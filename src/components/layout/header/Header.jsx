@@ -1,22 +1,28 @@
-import { FiArrowLeft, FiUser } from 'react-icons/fi';
+import { IoMdArrowBack } from 'react-icons/io';
+import { SlUser } from 'react-icons/sl';
 import { useLocation, useNavigate } from 'react-router-dom';
+
 import { useAuth } from '../../../hooks/useAuth';
+
 import Hamburger from '../hamburger/Hamburger';
+
 import styles from './Header.module.scss';
 
 const Header = ({ backLink = '' }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+
   const { isAuth } = useAuth();
+
   return (
     <header className={styles.header}>
-      {pathname !== '/' ? (
+      {pathname !== '/' || pathname !== '/auth' || !isAuth ? (
         <button
           onClick={() => {
-            navigate(backLink);
+            navigate(isAuth ? backLink : '/auth');
           }}
         >
-          <FiArrowLeft />
+          <IoMdArrowBack fill="#fff" fontSize={29} />
         </button>
       ) : (
         <button
@@ -24,10 +30,10 @@ const Header = ({ backLink = '' }) => {
             navigate('/profile');
           }}
         >
-          <FiUser />
+          <SlUser fill="#fff" fontSize={25} />
         </button>
       )}
-      <Hamburger />
+      {isAuth && <Hamburger />}
     </header>
   );
 };

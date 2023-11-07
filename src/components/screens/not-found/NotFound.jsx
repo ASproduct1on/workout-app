@@ -1,12 +1,12 @@
-import Layout from '../../layout/Layout';
+import Layout from '../../layout/Layout'
 
 const NotFound = () => {
-  return (
-    <div>
-      <Layout heading="Page not found" />
-      <div className="wrapper-inner-page">404 page not Found</div>
-    </div>
-  );
-};
+	return (
+		<>
+			<Layout heading='Page not found' />
+			<div className='wrapper-inner-page'>404 page not found</div>
+		</>
+	)
+}
 
-export default NotFound;
+export default NotFound

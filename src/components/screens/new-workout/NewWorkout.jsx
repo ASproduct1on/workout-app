@@ -1,5 +1,5 @@
 const NewWorkout = () => {
-  return <div>NewWorkout</div>;
-};
+	return <div>NewWorkout</div>
+}
 
-export default NewWorkout;
+export default NewWorkout
