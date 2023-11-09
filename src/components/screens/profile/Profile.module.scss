@@ -1,0 +1,31 @@
+@import 'src/assets/styles/variables';
+
+.before_after {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: $mobile) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  > div {
+    width: 50%;
+    @media (max-width: $mobile) {
+      width: 48%;
+    }
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  .heading {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.center {
+  text-align: center;
+  margin: 6px 0 18px;
+}

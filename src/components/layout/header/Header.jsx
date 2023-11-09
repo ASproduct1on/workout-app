@@ -8,7 +8,7 @@ import Hamburger from '../hamburger/Hamburger';
 
 import styles from './Header.module.scss';
 
-const Header = ({ backLink = '' }) => {
+const Header = ({ backLink = '/' }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
