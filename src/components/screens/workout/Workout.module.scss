@@ -1,0 +1,46 @@
+@import 'src/assets/styles/variables';
+
+.time {
+	color: #deb6b6;
+	font-size: 20px;
+}
+
+.wrapper {
+	> div.item {
+		margin: 0 auto;
+		margin-bottom: 30px;
+		background-color: $dark-accent;
+		color: $white;
+		width: 90%;
+		border-radius: 10px;
+
+		> button,
+		> a {
+			padding: 14px 20px;
+			font-size: 20px;
+			color: $white;
+			text-decoration: none;
+			justify-content: space-between;
+			display: flex;
+			align-items: center;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			@media (max-width: $mobile) {
+				font-size: 18px;
+			}
+		}
+
+		&.completed {
+			background-color: $hard-dark-accent;
+		}
+	}
+
+	.line {
+		width: 100%;
+		height: 1px;
+		background-color: $hard-dark-accent;
+		margin-bottom: 30px;
+	}
+}
