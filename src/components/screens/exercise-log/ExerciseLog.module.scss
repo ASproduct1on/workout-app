@@ -1,0 +1,111 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/animations';
+
+.heading {
+	display: flex;
+	align-items: center;
+
+	> img {
+		margin-right: 9px;
+	}
+}
+
+.wrapper {
+	border-radius: 10px;
+	background-color: $hard-dark-accent;
+	margin: 0 auto;
+	width: 90%;
+
+	> .row {
+		display: flex;
+		align-items: center;
+
+		> div {
+			width: 30%;
+			padding: 15px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@media (max-width: $mobile) {
+				padding: 15px 10px;
+				width: 35%;
+			}
+
+			> i,
+			> span,
+			> input {
+				font-size: 18px;
+				color: $white;
+				@media (max-width: $mobile) {
+					font-size: 16px;
+				}
+			}
+
+			> i {
+				margin: 0 2px;
+			}
+
+			> input {
+				border: none;
+				outline: none;
+				background-color: transparent;
+				width: 27px;
+
+				&:first-child {
+					text-align: right;
+					animation: opacity 0.4s;
+				}
+			}
+
+			> .checkbox {
+				cursor: pointer;
+			}
+
+			> i {
+				font-style: normal;
+			}
+
+			&:nth-child(2) {
+				width: 50%;
+				border-left: 1px solid rgba($dark-accent, 0.6);
+				border-right: 1px solid rgba($dark-accent, 0.6);
+				@media (max-width: $mobile) {
+					width: 40%;
+				}
+			}
+		}
+
+		&:first-child {
+			border-bottom: 1px solid rgba($dark-accent, 0.6);
+			@media (max-width: $mobile) {
+				> div > span {
+					font-size: 14px;
+				}
+			}
+		}
+
+		&:last-child > div {
+			padding-bottom: 100px;
+		}
+
+		&.completed {
+			> div {
+				color: $accent;
+				> i {
+					margin: 0 -1px;
+				}
+				> input,
+				> i {
+					color: $accent;
+					text-decoration: line-through;
+					cursor: default;
+				}
+			}
+		}
+
+		.opacity {
+			opacity: 0.7;
+		}
+	}
+}
